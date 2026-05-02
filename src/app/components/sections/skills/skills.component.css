@@ -1,0 +1,7 @@
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.15);
+}
+
+.hover-border-primary:hover {
+  border-color: var(--primary) !important;
+}

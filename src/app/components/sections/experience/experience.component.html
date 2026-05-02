@@ -1,0 +1,28 @@
+<section id="experience" class="section-gap px-4 bg-surface-container-lowest">
+  <div class="container-max" [@antigravity]="{ value: '*', params: { time: '10s' } }">
+    <div class="d-flex flex-column mb-5" style="gap: 1rem;">
+      <h2 class="text-headline-lg text-white-toggle font-display m-0">Professional Milestone</h2>
+      <div class="bg-primary-container rounded-pill" style="height: 4px; width: 6rem;"></div>
+    </div>
+
+    <div class="glass-card p-4 p-md-5 rounded-xl">
+      <p-timeline [value]="experience" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+          <span class="d-flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1 border-primary-container rounded-circle glass-card" style="width: 2rem; height: 2rem;">
+             <i class="material-symbols-outlined text-primary-container" style="font-size: 1rem;">{{ event.icon || 'work' }}</i>
+          </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+          <div class="glass-card p-4 rounded text-start mb-4 electric-glow transition-all hover:border-primary border-outline-variant">
+            <span class="text-primary font-display text-label-caps d-block mb-2">{{ event.date }}</span>
+            <h3 class="text-white-toggle text-headline-md font-display mb-1">{{ event.role }}</h3>
+            <h4 class="text-on-surface-variant font-display mb-3" style="font-size: 1rem;">{{ event.company }} - {{ event.location }}</h4>
+            <ul class="text-on-surface font-display ps-3 m-0 d-flex flex-column gap-2">
+              <li *ngFor="let bullet of event.bullets">{{ bullet }}</li>
+            </ul>
+          </div>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </div>
+</section>
