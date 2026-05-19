@@ -9,6 +9,368 @@
     style="bottom: -10rem; right: 10%; width: 30rem; height: 30rem; background: var(--primary); opacity: 0.03; pointer-events: none;">
   </div>
 
+  <!-- Left Side Animation: Quantum Gyroscope Core (Hidden on mobile/tablet, active on desktop) -->
+  <div class="footer-bg-left d-none d-xl-block">
+    <div class="gyro-container">
+      <div class="gyro-mesh">
+        <!-- High-Tech Axis Grid & Static Guides -->
+        <svg class="gyro-axes" viewBox="0 0 100 100">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 2 L 8 5 L 0 8 z" fill="var(--primary-container)" />
+            </marker>
+            <linearGradient id="orbitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--primary)" stop-opacity="1" />
+              <stop offset="50%" stop-color="var(--primary)" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="var(--primary)" stop-opacity="0.05" />
+            </linearGradient>
+            <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="var(--primary-container)" stop-opacity="1" />
+              <stop offset="60%" stop-color="var(--primary-container)" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="var(--primary-container)" stop-opacity="0.05" />
+            </linearGradient>
+            <linearGradient id="orbitGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="var(--primary)" stop-opacity="1" />
+              <stop offset="50%" stop-color="var(--primary)" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="var(--primary)" stop-opacity="0.05" />
+            </linearGradient>
+            <linearGradient id="orbitGrad4" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="var(--primary-container)" stop-opacity="1" />
+              <stop offset="50%" stop-color="var(--primary-container)" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="var(--primary-container)" stop-opacity="0.05" />
+            </linearGradient>
+            <linearGradient id="orbitGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="var(--primary)" stop-opacity="1" />
+              <stop offset="50%" stop-color="var(--primary)" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="var(--primary)" stop-opacity="0.05" />
+            </linearGradient>
+          </defs>
+          
+          <!-- Concentric Radar Rings -->
+          <circle cx="50" cy="50" r="48" fill="none" stroke="var(--primary-container)" stroke-width="0.4" stroke-dasharray="1 3" opacity="0.3" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="var(--primary-container)" stroke-width="0.4" stroke-dasharray="1 3" opacity="0.3" />
+          
+          <!-- Static Guide Ring Outlines -->
+          <circle cx="50" cy="50" r="45" fill="none" stroke="var(--primary)" stroke-width="0.4" opacity="0.1" />
+          <circle cx="50" cy="50" r="40" fill="none" stroke="var(--primary-container)" stroke-width="0.4" opacity="0.1" />
+          <circle cx="50" cy="50" r="35" fill="none" stroke="var(--primary)" stroke-width="0.4" opacity="0.1" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="var(--primary-container)" stroke-width="0.4" opacity="0.1" />
+          <circle cx="50" cy="50" r="24" fill="none" stroke="var(--primary)" stroke-width="0.4" opacity="0.1" />
+          
+          <!-- Twinkling Quantum Sparkles -->
+          <circle class="quantum-sparkle sparkle-1" cx="30" cy="40" r="1" fill="#ffffff" />
+          <circle class="quantum-sparkle sparkle-2" cx="70" cy="30" r="1.3" fill="var(--primary-container)" />
+          <circle class="quantum-sparkle sparkle-3" cx="45" cy="75" r="1.1" fill="var(--primary)" />
+          <circle class="quantum-sparkle sparkle-4" cx="65" cy="65" r="0.8" fill="#ffffff" />
+          <circle class="quantum-sparkle sparkle-5" cx="25" cy="60" r="1.2" fill="var(--primary-container)" />
+
+          <!-- Z-Axis (Vertical) -->
+          <line x1="50" y1="90" x2="50" y2="10" stroke="var(--primary-container)" stroke-width="0.8" opacity="0.5" marker-end="url(#arrow)" />
+          
+          <!-- X-Axis Diagonal -->
+          <line x1="85" y1="15" x2="15" y2="85" stroke="var(--primary-container)" stroke-width="0.8" opacity="0.5" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+          
+          <!-- Y-Axis Diagonal -->
+          <line x1="15" y1="15" x2="85" y2="85" stroke="var(--primary-container)" stroke-width="0.8" opacity="0.5" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+          
+          <!-- Horizontal Axis -->
+          <line x1="10" y1="50" x2="95" y2="50" stroke="var(--primary-container)" stroke-width="0.8" opacity="0.3" marker-end="url(#arrow)" />
+        </svg>
+
+        <!-- Orbit 1 (Radius 45, Outer) -->
+        <div class="gyro-ring ring-outer">
+          <svg class="ring-svg" viewBox="0 0 100 100">
+            <circle class="orbit-path" cx="50" cy="50" r="45" fill="none" stroke="url(#orbitGrad1)" stroke-width="1.8" />
+            <circle class="comet-head" cx="50" cy="5" r="3.5" fill="var(--primary)" />
+          </svg>
+        </div>
+        
+        <!-- Orbit 2 (Radius 40, Mid-Outer) -->
+        <div class="gyro-ring ring-mid-outer">
+          <svg class="ring-svg" viewBox="0 0 100 100">
+            <circle class="orbit-path" cx="50" cy="50" r="40" fill="none" stroke="url(#orbitGrad2)" stroke-width="1.8" />
+            <circle class="comet-head" cx="50" cy="10" r="3.2" fill="var(--primary-container)" />
+          </svg>
+        </div>
+        
+        <!-- Orbit 3 (Radius 35, Mid) -->
+        <div class="gyro-ring ring-middle">
+          <svg class="ring-svg" viewBox="0 0 100 100">
+            <circle class="orbit-path" cx="50" cy="50" r="35" fill="none" stroke="url(#orbitGrad3)" stroke-width="1.6" />
+            <circle class="comet-head" cx="50" cy="15" r="3" fill="var(--primary)" />
+          </svg>
+        </div>
+        
+        <!-- Orbit 4 (Radius 30, Mid-Inner) -->
+        <div class="gyro-ring ring-mid-inner">
+          <svg class="ring-svg" viewBox="0 0 100 100">
+            <circle class="orbit-path" cx="50" cy="50" r="30" fill="none" stroke="url(#orbitGrad4)" stroke-width="1.4" />
+            <circle class="comet-head" cx="50" cy="20" r="2.8" fill="var(--primary-container)" />
+          </svg>
+        </div>
+        
+        <!-- Orbit 5 (Radius 24, Inner) -->
+        <div class="gyro-ring ring-inner">
+          <svg class="ring-svg" viewBox="0 0 100 100">
+            <circle class="orbit-path" cx="50" cy="50" r="24" fill="none" stroke="url(#orbitGrad5)" stroke-width="1.2" />
+            <circle class="comet-head" cx="50" cy="26" r="2.5" fill="var(--primary)" />
+          </svg>
+        </div>
+        
+        <!-- Center Quantum Core -->
+        <div class="gyro-core-container">
+          <!-- Outer energy shell -->
+          <div class="gyro-core-shell"></div>
+          <!-- Bright central orb -->
+          <div class="gyro-core-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Right Side Animation: Realistic Organic Tree (Hidden on mobile/tablet, active on desktop) -->
+  <div class="footer-bg-right d-none d-xl-block">
+    <div class="tree-container">
+      <svg class="tree-svg" viewBox="0 0 100 100">
+        <defs>
+          <!-- Bark gradient: dark base to lighter tip -->
+          <linearGradient id="barkGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#3b1f0a" />
+            <stop offset="40%" stop-color="#5c2e10" />
+            <stop offset="100%" stop-color="#7a3f1a" />
+          </linearGradient>
+          <!-- Branch gradient -->
+          <linearGradient id="branchGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#5c2e10" />
+            <stop offset="100%" stop-color="#8b4f22" />
+          </linearGradient>
+          <!-- Twig gradient -->
+          <linearGradient id="twigGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#7a3f1a" />
+            <stop offset="100%" stop-color="#a0632e" />
+          </linearGradient>
+          <!-- Leaf gradient: deep green to teal-cyan -->
+          <linearGradient id="leafGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1a7a4a" />
+            <stop offset="100%" stop-color="#00bfa5" />
+          </linearGradient>
+          <linearGradient id="leafGradR" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2e7d32" />
+            <stop offset="100%" stop-color="#00e5c3" />
+          </linearGradient>
+          <!-- Ground shadow -->
+          <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#000" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#000" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+
+        <!-- Ground shadow ellipse -->
+        <ellipse cx="50" cy="97" rx="22" ry="3" fill="url(#groundShadow)" />
+
+        <!-- Ground line -->
+        <line x1="10" y1="96" x2="90" y2="96" stroke="#3b1f0a" stroke-width="0.4" opacity="0.3" />
+
+        <!-- ROOTS -->
+        <path class="tree-branch trunk" d="M50,95 Q44,97 38,97.5" fill="none" stroke="url(#barkGrad)" stroke-width="1.4" stroke-linecap="round" opacity="0.85" />
+        <path class="tree-branch trunk" d="M50,95 Q56,97 62,97.5" fill="none" stroke="url(#barkGrad)" stroke-width="1.4" stroke-linecap="round" opacity="0.85" />
+        <path class="tree-branch trunk" d="M50,95 Q46,96 40,96.5" fill="none" stroke="url(#barkGrad)" stroke-width="0.8" stroke-linecap="round" opacity="0.6" />
+        <path class="tree-branch trunk" d="M50,95 Q54,96 60,96.5" fill="none" stroke="url(#barkGrad)" stroke-width="0.8" stroke-linecap="round" opacity="0.6" />
+
+        <!-- TRUNK (thick, tapered) -->
+        <path class="tree-branch trunk" d="M50,96 Q49,88 48,78 Q47.5,72 48,65" fill="none" stroke="url(#barkGrad)" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Bark texture lines -->
+        <path d="M49,90 Q50,87 49.5,84" fill="none" stroke="#2a1207" stroke-width="0.35" opacity="0.5" />
+        <path d="M48.5,82 Q49.5,79 48.8,76" fill="none" stroke="#2a1207" stroke-width="0.3" opacity="0.4" />
+        <path d="M49,73 Q50,70 49.2,67" fill="none" stroke="#2a1207" stroke-width="0.3" opacity="0.35" />
+
+        <!-- LEVEL 1: Major trunk split at y=65 -->
+        <!-- Left main branch -->
+        <path class="tree-branch branch-l1" d="M48,65 Q42,58 33,53" fill="none" stroke="url(#branchGrad)" stroke-width="3.2" stroke-linecap="round" />
+        <!-- Right main branch -->
+        <path class="tree-branch branch-l1" d="M48,65 Q52,56 57,46" fill="none" stroke="url(#branchGrad)" stroke-width="3.2" stroke-linecap="round" />
+        <!-- Center-right branch -->
+        <path class="tree-branch branch-l1" d="M48,65 Q50,55 49,44" fill="none" stroke="url(#branchGrad)" stroke-width="2.4" stroke-linecap="round" />
+
+        <!-- LEVEL 2: Secondary splits -->
+        <!-- From left (33,53) -->
+        <path class="tree-branch branch-l2" d="M33,53 Q24,50 17,42" fill="none" stroke="url(#branchGrad)" stroke-width="2.0" stroke-linecap="round" />
+        <path class="tree-branch branch-l2" d="M33,53 Q30,43 30,34" fill="none" stroke="url(#branchGrad)" stroke-width="2.0" stroke-linecap="round" />
+        <!-- From center (49,44) -->
+        <path class="tree-branch branch-l2" d="M49,44 Q43,37 40,28" fill="none" stroke="url(#branchGrad)" stroke-width="1.7" stroke-linecap="round" />
+        <path class="tree-branch branch-l2" d="M49,44 Q53,36 52,26" fill="none" stroke="url(#branchGrad)" stroke-width="1.7" stroke-linecap="round" />
+        <!-- From right (57,46) -->
+        <path class="tree-branch branch-l2" d="M57,46 Q64,40 68,31" fill="none" stroke="url(#branchGrad)" stroke-width="2.0" stroke-linecap="round" />
+        <path class="tree-branch branch-l2" d="M57,46 Q60,55 65,58" fill="none" stroke="url(#branchGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+        <!-- LEVEL 3: Fine branches (twigs) -->
+        <!-- From (17,42) -->
+        <path class="tree-branch branch-l3" d="M17,42 Q10,38 7,30" fill="none" stroke="url(#twigGrad)" stroke-width="1.3" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M17,42 Q13,33 15,24" fill="none" stroke="url(#twigGrad)" stroke-width="1.3" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M17,42 Q22,36 24,29" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <!-- From (30,34) -->
+        <path class="tree-branch branch-l3" d="M30,34 Q23,27 21,19" fill="none" stroke="url(#twigGrad)" stroke-width="1.2" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M30,34 Q30,23 31,14" fill="none" stroke="url(#twigGrad)" stroke-width="1.2" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M30,34 Q37,27 38,19" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <!-- From (40,28) -->
+        <path class="tree-branch branch-l3" d="M40,28 Q34,21 33,13" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M40,28 Q41,18 42,11" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <!-- From (52,26) -->
+        <path class="tree-branch branch-l3" d="M52,26 Q47,18 47,10" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M52,26 Q55,16 55,8" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <!-- From (68,31) -->
+        <path class="tree-branch branch-l3" d="M68,31 Q63,22 62,14" fill="none" stroke="url(#twigGrad)" stroke-width="1.2" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M68,31 Q72,22 74,13" fill="none" stroke="url(#twigGrad)" stroke-width="1.2" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M68,31 Q75,27 80,20" fill="none" stroke="url(#twigGrad)" stroke-width="1.0" stroke-linecap="round" />
+        <!-- From (65,58) -->
+        <path class="tree-branch branch-l3" d="M65,58 Q72,55 78,48" fill="none" stroke="url(#twigGrad)" stroke-width="1.1" stroke-linecap="round" />
+        <path class="tree-branch branch-l3" d="M65,58 Q70,62 76,60" fill="none" stroke="url(#twigGrad)" stroke-width="1.0" stroke-linecap="round" />
+
+        <!-- LEVEL 4: Ultra-fine twigs -->
+        <path class="tree-branch branch-l4" d="M7,30 Q4,24 3,18" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M7,30 Q7,23 8,17" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M15,24 Q12,17 12,11" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M15,24 Q17,17 18,11" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M24,29 Q21,23 20,17" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M24,29 Q26,22 27,16" fill="none" stroke="#9b6035" stroke-width="0.65" opacity="0.9" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M21,19 Q19,13 18,7" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M21,19 Q23,12 24,6" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M31,14 Q29,8 28,3" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M31,14 Q33,7 34,2" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M38,19 Q36,12 35,6" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M38,19 Q40,12 41,6" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M33,13 Q31,7 30,2" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M42,11 Q40,5 40,1" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M47,10 Q45,4 45,0" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M55,8 Q53,3 53,0" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M62,14 Q60,8 59,3" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M74,13 Q72,7 71,2" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M80,20 Q78,14 77,8" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M78,48 Q83,43 86,38" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+        <path class="tree-branch branch-l4" d="M76,60 Q81,56 84,50" fill="none" stroke="#9b6035" stroke-width="0.6" opacity="0.85" stroke-linecap="round" />
+
+        <!-- ===== ORGANIC LEAF CLUSTERS ===== -->
+        <!-- Each leaf is a rotated ellipse to simulate a real leaf shape -->
+        <!-- Left canopy -->
+        <g>
+          <ellipse class="tree-leaf leaf-left leaf-1"  cx="3"  cy="17" rx="2.2" ry="1.1" transform="rotate(-40,3,17)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-2"  cx="7"  cy="14" rx="2.2" ry="1.0" transform="rotate(-55,7,14)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-3"  cx="8"  cy="21" rx="2.0" ry="1.0" transform="rotate(-20,8,21)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-4"  cx="12" cy="10" rx="2.1" ry="1.0" transform="rotate(-60,12,10)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-5"  cx="18" cy="10" rx="2.2" ry="1.1" transform="rotate(-50,18,10)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-6"  cx="20" cy="16" rx="2.0" ry="1.0" transform="rotate(-30,20,16)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-7"  cx="23" cy="5"  rx="2.1" ry="1.0" transform="rotate(-65,23,5)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-8"  cx="27" cy="15" rx="2.0" ry="1.0" transform="rotate(-40,27,15)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-9"  cx="28" cy="2"  rx="2.2" ry="1.1" transform="rotate(-70,28,2)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-10" cx="34" cy="1"  rx="2.1" ry="1.0" transform="rotate(80,34,1)"   fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-11" cx="33" cy="9"  rx="2.0" ry="1.0" transform="rotate(-55,33,9)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-12" cx="40" cy="5"  rx="2.2" ry="1.1" transform="rotate(-45,40,5)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-13" cx="40" cy="0"  rx="2.0" ry="1.0" transform="rotate(90,40,0)"   fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-14" cx="21" cy="23" rx="1.9" ry="0.9" transform="rotate(-20,21,23)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-15" cx="14" cy="26" rx="1.9" ry="0.9" transform="rotate(-35,14,26)" fill="url(#leafGradL)" />
+          <!-- Extra density -->
+          <ellipse class="tree-leaf leaf-left leaf-16" cx="10" cy="17" rx="1.8" ry="0.8" transform="rotate(-45,10,17)" fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-17" cx="5"  cy="24" rx="1.8" ry="0.8" transform="rotate(-25,5,24)"  fill="url(#leafGradL)" />
+          <ellipse class="tree-leaf leaf-left leaf-18" cx="25" cy="26" rx="1.7" ry="0.8" transform="rotate(-15,25,26)" fill="url(#leafGradL)" />
+        </g>
+
+        <!-- Right canopy -->
+        <g>
+          <ellipse class="tree-leaf leaf-right leaf-25" cx="46" cy="0"  rx="2.2" ry="1.1" transform="rotate(-85,46,0)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-26" cx="53" cy="0"  rx="2.2" ry="1.0" transform="rotate(85,53,0)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-27" cx="47" cy="7"  rx="2.1" ry="1.0" transform="rotate(-70,47,7)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-28" cx="55" cy="5"  rx="2.2" ry="1.0" transform="rotate(65,55,5)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-29" cx="59" cy="2"  rx="2.1" ry="1.0" transform="rotate(75,59,2)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-30" cx="64" cy="7"  rx="2.0" ry="1.0" transform="rotate(50,64,7)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-31" cx="70" cy="1"  rx="2.2" ry="1.1" transform="rotate(80,70,1)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-32" cx="73" cy="9"  rx="2.1" ry="1.0" transform="rotate(55,73,9)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-33" cx="61" cy="11" rx="2.0" ry="1.0" transform="rotate(40,61,11)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-34" cx="78" cy="7"  rx="2.1" ry="1.0" transform="rotate(60,78,7)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-35" cx="80" cy="19" rx="2.0" ry="1.0" transform="rotate(45,80,19)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-36" cx="86" cy="37" rx="2.2" ry="1.0" transform="rotate(30,86,37)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-37" cx="84" cy="49" rx="2.1" ry="1.0" transform="rotate(20,84,49)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-38" cx="84" cy="56" rx="2.0" ry="0.9" transform="rotate(10,84,56)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-39" cx="75" cy="19" rx="1.9" ry="0.9" transform="rotate(50,75,19)"  fill="url(#leafGradR)" />
+          <!-- Extra density -->
+          <ellipse class="tree-leaf leaf-right leaf-40" cx="68" cy="16" rx="1.8" ry="0.8" transform="rotate(42,68,16)"  fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-41" cx="63" cy="3"  rx="1.8" ry="0.8" transform="rotate(70,63,3)"   fill="url(#leafGradR)" />
+          <ellipse class="tree-leaf leaf-right leaf-42" cx="78" cy="14" rx="1.7" ry="0.8" transform="rotate(58,78,14)"  fill="url(#leafGradR)" />
+        </g>
+
+        <!-- Subtle cyber glow overlay (faint binary floaters for ambiance) -->
+        <g class="matrix-code-layer" opacity="0.4">
+          <text class="binary-code-text b-col-1" x="42" y="90" font-size="1.4">01</text>
+          <text class="binary-code-text b-col-3" x="35" y="78" font-size="1.2">10</text>
+          <text class="binary-code-text b-col-5" x="22" y="65" font-size="1.1">01</text>
+          <text class="binary-code-text b-col-7" x="46" y="55" font-size="1.2">11</text>
+        </g>
+
+        <!-- Butterflies -->
+        <!-- Butterfly System 1: Roaming -->
+          <g class="butterfly-system-1">
+            <g class="butterfly">
+              <!-- Segmented Body -->
+              <rect class="butterfly-body" x="-0.3" y="-1.6" width="0.6" height="3.2" rx="0.3" fill="#ffffff" opacity="0.95" />
+              
+              <!-- Left Wing System -->
+              <g class="wing-left-system">
+                <path class="wing wing-fore" d="M0,-0.6 Q-5,-5 -7,-1.8 Q-6,0.8 -0.2,0.2" fill="var(--primary)" stroke="var(--primary-container)" stroke-width="0.25" />
+                <path class="wing wing-hind" d="M0,0 Q-4,2.5 -3.2,4 Q-0.8,3.6 -0.2,0.6" fill="var(--primary)" opacity="0.85" stroke="var(--primary-container)" stroke-width="0.2" />
+                <path class="wing-vein" d="M-1,-0.8 Q-3.5,-2.5 -5,-1.5 M-0.8,-0.2 Q-2.5,0.8 -2.5,2.4 M-0.6,0.2 L-1.8,1.2" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.8" />
+              </g>
+              
+              <!-- Right Wing System -->
+              <g class="wing-right-system">
+                <path class="wing wing-fore" d="M0,-0.6 Q5,-5 7,-1.8 Q6,0.8 0.2,0.2" fill="var(--primary)" stroke="var(--primary-container)" stroke-width="0.25" />
+                <path class="wing wing-hind" d="M0,0 Q4,2.5 3.2,4 Q0.8,3.6 0.2,0.6" fill="var(--primary)" opacity="0.85" stroke="var(--primary-container)" stroke-width="0.2" />
+                <path class="wing-vein" d="M1,-0.8 Q3.5,-2.5 5,-1.5 M0.8,-0.2 Q2.5,0.8 2.5,2.4 M0.6,0.2 L1.8,1.2" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.8" />
+              </g>
+
+              <!-- Antennae & Glowing Head -->
+              <path class="butterfly-antenna" d="M-0.1,-1.6 Q-0.8,-3.6 -1.8,-4" fill="none" stroke="#ffffff" stroke-width="0.2" />
+              <path class="butterfly-antenna" d="M0.1,-1.6 Q0.8,-3.6 1.8,-4" fill="none" stroke="#ffffff" stroke-width="0.2" />
+              <circle cx="0" cy="-1.6" r="0.4" fill="#ffffff" />
+            </g>
+            <circle class="trail-sparkle spark-1" cx="0" cy="0" r="0.6" fill="#ffffff" />
+            <circle class="trail-sparkle spark-2" cx="0" cy="0" r="0.4" fill="var(--primary-container)" />
+            <circle class="trail-sparkle spark-3" cx="0" cy="0" r="0.3" fill="var(--primary)" />
+            <circle class="trail-sparkle spark-4" cx="0" cy="0" r="0.2" fill="#ffffff" />
+          </g>
+
+          <!-- Butterfly System 2: Roaming on the right and center -->
+          <g class="butterfly-system-2">
+            <g class="butterfly">
+              <!-- Segmented Body -->
+              <rect class="butterfly-body" x="-0.3" y="-1.6" width="0.6" height="3.2" rx="0.3" fill="#ffffff" opacity="0.95" />
+              
+              <!-- Left Wing System -->
+              <g class="wing-left-system">
+                <path class="wing wing-fore" d="M0,-0.6 Q-5,-5 -7,-1.8 Q-6,0.8 -0.2,0.2" fill="var(--primary-container)" stroke="var(--primary)" stroke-width="0.25" />
+                <path class="wing wing-hind" d="M0,0 Q-4,2.5 -3.2,4 Q-0.8,3.6 -0.2,0.6" fill="var(--primary-container)" opacity="0.85" stroke="var(--primary)" stroke-width="0.2" />
+                <path class="wing-vein" d="M-1,-0.8 Q-3.5,-2.5 -5,-1.5 M-0.8,-0.2 Q-2.5,0.8 -2.5,2.4 M-0.6,0.2 L-1.8,1.2" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.8" />
+              </g>
+              
+              <!-- Right Wing System -->
+              <g class="wing-right-system">
+                <path class="wing wing-fore" d="M0,-0.6 Q5,-5 7,-1.8 Q6,0.8 0.2,0.2" fill="var(--primary-container)" stroke="var(--primary)" stroke-width="0.25" />
+                <path class="wing wing-hind" d="M0,0 Q4,2.5 3.2,4 Q0.8,3.6 0.2,0.6" fill="var(--primary-container)" opacity="0.85" stroke="var(--primary)" stroke-width="0.2" />
+                <path class="wing-vein" d="M1,-0.8 Q3.5,-2.5 5,-1.5 M0.8,-0.2 Q2.5,0.8 2.5,2.4 M0.6,0.2 L1.8,1.2" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.8" />
+              </g>
+
+              <!-- Antennae & Glowing Head -->
+              <path class="butterfly-antenna" d="M-0.1,-1.6 Q-0.8,-3.6 -1.8,-4" fill="none" stroke="#ffffff" stroke-width="0.2" />
+              <path class="butterfly-antenna" d="M0.1,-1.6 Q0.8,-3.6 1.8,-4" fill="none" stroke="#ffffff" stroke-width="0.2" />
+              <circle cx="0" cy="-1.6" r="0.4" fill="#ffffff" />
+            </g>
+            <circle class="trail-sparkle spark-1" cx="0" cy="0" r="0.6" fill="#ffffff" />
+            <circle class="trail-sparkle spark-2" cx="0" cy="0" r="0.4" fill="var(--primary)" />
+            <circle class="trail-sparkle spark-3" cx="0" cy="0" r="0.3" fill="var(--primary-container)" />
+          </g>
+      </svg>
+    </div>
+  </div>
+
   <div class="container-max w-100">
     <div class="row g-5">
       <!-- Brand & About -->
@@ -34,7 +396,7 @@
         <h4 class="text-white-toggle font-display text-label-caps mb-4">Core Stack</h4>
         <div class="d-flex flex-wrap gap-2">
           <ng-container *ngFor="let cat of resume.skills">
-            <span *ngFor="let item of cat.items.slice(0,3)"
+            <span *ngFor="let item of getFooterItems(cat)"
               class="badge rounded-pill border border-outline-variant text-on-surface-variant font-display py-2 px-3 d-flex align-items-center justify-content-center"
               style="font-size: 1.2rem; background: rgba(255,255,255,0.03); width: 2.5rem; height: 2.5rem; padding: 0 !important;" [title]="item.name">
               

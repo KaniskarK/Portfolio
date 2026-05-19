@@ -10,41 +10,55 @@ export const RESUME_DATA = {
     summary: 'Specialized in migrating legacy ASPX forms to modern .NET Framework, optimizing database performance, and implementing Agile processes with Jira. Designed CI/CD pipelines that reduced deployment time by 50%.'
   },
   skills: [
-    { category: 'Languages', items: [
-      { name: 'C#', icon: 'devicon-csharp-plain colored' },
-      { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
-      { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
-      { name: 'C++', icon: 'devicon-cplusplus-plain colored' },
-      { name: 'HTML/CSS', icon: 'devicon-html5-plain colored' }
-    ]},
-    { category: 'Frameworks & Testing', items: [
-      { name: 'Angular', icon: 'devicon-angularjs-plain colored' },
-      { name: '.NET Core', icon: 'devicon-dotnetcore-plain colored' },
-      { name: '.NET Framework', icon: 'devicon-dot-net-plain colored' },
-      { name: 'ASP.NET', icon: 'devicon-dot-net-plain colored' },
-      { name: 'Cypress', icon: 'devicon-cypressio-plain' }
-    ]},
-    { category: 'Databases & Tools', items: [
-      { name: 'MSSQL', icon: 'devicon-microsoftsqlserver-plain colored' },
-      { name: 'Git', icon: 'devicon-git-plain colored' },
-      { name: 'SVN', icon: 'devicon-subversion-plain colored' },
-      { name: 'Visual Studio', icon: 'devicon-visualstudio-plain colored' },
-      { name: 'VS Code', icon: 'devicon-vscode-plain colored' }
-    ]},
-    { category: 'DevOps & Cloud', items: [
-      { name: 'Jenkins', icon: '/jenkins.svg' },
-      { name: 'Docker', icon: 'devicon-docker-plain colored' },
-      { name: 'Prometheus', icon: 'devicon-prometheus-original' },
-      { name: 'Grafana', icon: 'devicon-grafana-plain' },
-      { name: 'Azure', icon: 'devicon-azure-plain colored' },
-      { name: 'Batch Scripting', icon: 'devicon-bash-plain' }
-    ]},
-    { category: 'Methodologies', items: [
-      { name: 'Agile', icon: 'pi pi-sync' },
-      { name: 'Scrum', icon: 'pi pi-users' },
-      { name: 'Jira', icon: 'devicon-jira-plain colored' },
-      { name: 'SDLC', icon: 'pi pi-cog' }
-    ]}
+    {
+      category: 'Languages', items: [
+        { name: 'C#', icon: 'devicon-csharp-plain colored' },
+        { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+        { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
+        { name: 'C++', icon: 'devicon-cplusplus-plain colored' },
+        { name: 'HTML/CSS', icon: 'devicon-html5-plain colored' }
+      ]
+    },
+    {
+      category: 'Frameworks & Testing', items: [
+        { name: 'Angular', icon: 'devicon-angularjs-plain colored' },
+        { name: 'RxJS', icon: 'devicon-rxjs-plain colored' },
+        { name: '.NET Core', icon: 'devicon-dotnetcore-plain colored' },
+        { name: '.NET Framework', icon: 'devicon-dot-net-plain colored' },
+        { name: 'ASP.NET', icon: 'devicon-dot-net-plain colored' },
+        { name: 'Playwright', icon: 'devicon-playwright-plain' },
+        { name: 'Cypress', icon: 'devicon-cypressio-plain' }
+      ]
+    },
+    {
+      category: 'Databases & Tools', items: [
+        { name: 'MSSQL', icon: 'devicon-microsoftsqlserver-plain colored' },
+        { name: 'Git', icon: 'devicon-git-plain colored' },
+        { name: 'SVN', icon: 'devicon-subversion-plain colored' },
+        { name: 'Visual Studio', icon: 'devicon-visualstudio-plain colored' },
+        { name: 'VS Code', icon: 'devicon-vscode-plain colored' },
+        { name: 'IIS', icon: '/iis.svg' },
+        { name: 'AI', icon: 'pi pi-sparkles' }
+      ]
+    },
+    {
+      category: 'DevOps & Cloud', items: [
+        { name: 'Jenkins', icon: '/jenkins.svg' },
+        { name: 'Docker', icon: 'devicon-docker-plain colored' },
+        { name: 'Prometheus', icon: 'devicon-prometheus-original' },
+        { name: 'Grafana', icon: 'devicon-grafana-plain' },
+        { name: 'Azure', icon: 'devicon-azure-plain colored' },
+        { name: 'Batch Scripting', icon: 'devicon-bash-plain' }
+      ]
+    },
+    {
+      category: 'Methodologies', items: [
+        { name: 'Agile', icon: 'pi pi-sync' },
+        { name: 'Scrum', icon: 'pi pi-users' },
+        { name: 'Jira', icon: 'devicon-jira-plain colored' },
+        { name: 'SDLC', icon: 'pi pi-cog' }
+      ]
+    }
   ],
   experience: [
     {
