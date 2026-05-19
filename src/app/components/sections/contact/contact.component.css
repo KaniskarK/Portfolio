@@ -1,4 +1,17 @@
+.hover-white-5 {
+  transition: all 0.3s ease;
+}
+
 .hover-white-5:hover {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  color: white !important;
+  background-color: rgba(0, 224, 255, 0.05) !important;
+  color: var(--primary-container) !important;
+  border-color: var(--primary-container) !important;
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.4) !important;
+}
+
+:host-context([data-theme="light"]) .hover-white-5:hover {
+  background-color: var(--primary-container) !important;
+  color: var(--on-primary-container) !important;
+  border-color: var(--primary-container) !important;
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.15) !important;
 }
